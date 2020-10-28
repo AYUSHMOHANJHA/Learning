@@ -1,10 +1,12 @@
 #this file is created by me 
 
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("hello ayush")
-
+    #return HttpResponse("hello ayush")
+    params = {'Name':'Ayush','Place':'Moon'}
+    return render(request, 'index.html',params)
 
 def about(request):
     return HttpResponse("<i>about hello ayush</i>")
